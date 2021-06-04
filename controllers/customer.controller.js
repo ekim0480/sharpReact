@@ -38,8 +38,8 @@ exports.create = (req, res) => {
 
 // Retrieve all Tutorials from the database.
 exports.findAll = (req, res) => {
-    const firstName = req.query.firstName;
-    var condition = firstName ? { firstName: { [Op.like]: `%${firstName}%` } } : null;
+    const phone = req.query.phone;
+    var condition = phone ? { phone: { [Op.like]: `%${phone}%` } } : null;
   
     Customer.findAll({ where: condition })
       .then(data => {
@@ -136,15 +136,15 @@ exports.deleteAll = (req, res) => {
   };
 
 // Find all published Tutorials
-exports.findAllPublished = (req, res) => {
-    Customer.findAll({ where: { published: true } })
-      .then(data => {
-        res.send(data);
-      })
-      .catch(err => {
-        res.status(500).send({
-          message:
-            err.message || "Some error occurred while retrieving tutorials."
-        });
-      });
-  };
+// exports.findAllPublished = (req, res) => {
+//     Customer.findAll({ where: { published: true } })
+//       .then(data => {
+//         res.send(data);
+//       })
+//       .catch(err => {
+//         res.status(500).send({
+//           message:
+//             err.message || "Some error occurred while retrieving tutorials."
+//         });
+//       });
+//   };
