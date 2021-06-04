@@ -16,6 +16,7 @@ exports.create = (req, res) => {
     const customer = {
       firstName: req.body.firstName,
       lastName: req.body.lastName,
+      dob: req.body.dob,
       // published: req.body.published ? req.body.published : false
     };
   

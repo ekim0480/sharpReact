@@ -1,3 +1,5 @@
+const { Sequelize } = require(".");
+
 module.exports = function (sequelize, DataTypes) {
   const Customer = sequelize.define("customer", {
     // Giving the Customer model structure
