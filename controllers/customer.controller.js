@@ -18,6 +18,8 @@ exports.create = (req, res) => {
       lastName: req.body.lastName,
       dob: req.body.dob,
       phone: req.body.phone,
+      email: req.body.email,
+      mileage: req.body.mileage
       // published: req.body.published ? req.body.published : false
     };
   

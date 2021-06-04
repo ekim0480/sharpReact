@@ -10,13 +10,13 @@ module.exports = function (sequelize, DataTypes) {
     },
     lastName: {
       type: DataTypes.STRING(20),
-      // allowNull: false,
+      allowNull: false,
       notEmpty: true,
     },
     dob: {
       type: DataTypes.DATEONLY,
       // defaultValue: "1111-11-11",
-      // allowNull: false,
+      allowNull: false,
       validate: {
         isDate: true,
       },
@@ -24,7 +24,8 @@ module.exports = function (sequelize, DataTypes) {
     phone: {
       type: DataTypes.STRING(20),
       // defaultValue: "1111111111",
-      // allowNull: false,
+      allowNull: false,
+      unique: true,
       validate: {
         isNumeric: true,
         isAlphanumeric: true,
