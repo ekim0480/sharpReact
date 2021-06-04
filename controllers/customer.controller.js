@@ -17,6 +17,7 @@ exports.create = (req, res) => {
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       dob: req.body.dob,
+      phone: req.body.phone,
       // published: req.body.published ? req.body.published : false
     };
   
